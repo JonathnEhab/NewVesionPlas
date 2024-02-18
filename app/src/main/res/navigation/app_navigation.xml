@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.newvesionplas.ui.fragments.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <!--        <action-->
+        <!--            android:id="@+id/action_splashFragment_to_signInFragment"-->
+        <!--            app:destination="@id/signInFragment" />-->
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.newvesionplas.ui.fragments.signin.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+
+        <action
+            android:id="@+id/action_signInFragment_to_baseFragment2"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.example.newvesionplas.ui.fragments.base.BaseFragment"
+        android:label="BaseFragment"
+        tools:layout="@layout/fragment_base">
+                <action
+                    android:id="@+id/action_baseFragment_to_profileFragment2"
+                    app:destination="@id/profileFragment2" />
+                <action
+                    android:id="@+id/action_baseFragment_to_homeFragment2"
+                    app:destination="@id/homeFragment2" />
+                <action
+                    android:id="@+id/action_baseFragment_to_detalisFragment2"
+                    app:destination="@id/detalisFragment2" />
+                <action
+                    android:id="@+id/action_baseFragment_to_likesFragment"
+                    app:destination="@id/likesFragment" />
+        <action
+            android:id="@+id/action_baseFragment_to_likesFragment2"
+            app:destination="@id/likesFragment2" />
+        <action
+            android:id="@+id/action_baseFragment_self"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.newvesionplas.ui.fragments.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/likesFragment2"
+        android:name="com.example.newvesionplas.ui.fragments.likes.LikesFragment"
+        android:label="fragment_likes"
+        tools:layout="@layout/fragment_likes" />
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.example.newvesionplas.ui.fragments.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/detalisFragment2"
+        android:name="com.example.newvesionplas.ui.fragments.details.DetalisFragment"
+        android:label="DetalisFragment"
+        tools:layout="@layout/fragment_detalis"/>
+    <fragment
+        android:id="@+id/likesFragment"
+        android:name="com.example.newvesionplas.ui.fragments.likes.LikesFragment"
+        android:label="fragment_likes"
+        tools:layout="@layout/fragment_likes" />
+</navigation>
